@@ -1,34 +1,22 @@
-# DotGuard downloads
+# Paladin downloads
 
-Download DotGuard for Apple Silicon Macs running macOS 15 or later.
+Public download information for Paladin on Apple Silicon Macs running macOS 15 or later.
 
-**[Download DotGuard](https://github.com/kylon526/dotguard-downloads/releases/latest/download/DotGuard-macos-arm64.dmg)**
+[Download page](https://kylon526.github.io/paladin-downloads/) · [Earlier releases and checksums](https://github.com/kylon526/paladin-downloads/releases)
 
-[Alternative ZIP](https://github.com/kylon526/dotguard-downloads/releases/latest/download/DotGuard-macos-arm64.zip) · [Release notes and checksums](https://github.com/kylon526/dotguard-downloads/releases) · [Download page](https://kylon526.github.io/dotguard-downloads/)
+The fully renamed Paladin candidate has not been published here yet. It creates a separate, empty installation and does not import previous rules or protector credentials. Earlier releases remain archived with their original filenames and signed bundle contents and require an existing configured installation. Follow the instructions for the version you download. Remove previous protection through its own controls before configuring Paladin on the same connection.
 
-The DMG opens a custom window with just the DotGuard icon and Applications.
-Drag DotGuard into Applications. The app contains the monitor, CLI, gateway,
-and Python runtime; there are no loose support folders to copy. It requires an existing configured DotGuard installation.
-This build is ad-hoc signed and is not Apple-notarized. Automatic updating,
-installation, and corruption repair are not included yet.
+The repository rename does not upgrade archived installers or an installed app.
 
-Your rules, protector password/key, certificate state, and network configuration
-are never included in these public downloads. Source is maintained privately;
-this repository contains only download information and release assets.
+The Paladin candidate bundles its desktop app, menu monitor, CLI, gateway and
+Python runtime. Copying the app does not activate protection. Opening the installed
+candidate starts the menu monitor; first-run setup configures protection separately.
+Closing the desktop leaves the independent monitor and protection running.
 
-Closing the desktop app leaves the independent monitor and existing protection
-running. See the download page for first-open and existing-setup requirements.
+Builds are locally signed and are not Apple-notarized. If macOS blocks first open,
+use System Settings → Privacy & Security → Open Anyway for the downloaded app.
+[Apple's instructions](https://support.apple.com/en-us/102445).
 
-## First open on macOS
-
-Open the DMG, drag **DotGuard.app** to Applications, and try opening it.
-If macOS says Apple could not verify the app, click **Done**, then go to
-**System Settings → Privacy & Security → Security → Open Anyway** for DotGuard.
-Confirm **Open** and authenticate if asked.
-
-This is Apple's per-app approval flow. The DMG does not remove the warning:
-this build is locally signed and not Apple-notarized. Do not disable Gatekeeper
-system-wide. [Apple's instructions](https://support.apple.com/en-us/102445).
-
-Dragging the app does not replace service components or re-register an existing
-monitor job. Coordinated installation and updating remain separate work.
+Rules, protector credentials, certificates, logs and network settings are never
+included in public downloads. Source is private; this repository holds download
+information and release assets.
